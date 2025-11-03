@@ -1,0 +1,21 @@
+from pyspark.sql.types import *
+TAXI_SCHEMA = StructType([
+    StructField("VendorID", IntegerType()),
+    StructField("tpep_pickup_datetime", TimestampType()),
+    StructField("tpep_dropoff_datetime", TimestampType()),
+    StructField("passenger_count", IntegerType()),
+    StructField("trip_distance", DoubleType()),
+    StructField("RatecodeID", IntegerType()),
+    StructField("store_and_fwd_flag", StringType()),
+    StructField("PULocationID", IntegerType()),
+    StructField("DOLocationID", IntegerType()),
+    StructField("payment_type", IntegerType()),
+    StructField("fare_amount", DoubleType()),
+    StructField("extra", DoubleType()),
+    StructField("mta_tax", DoubleType()),
+    StructField("tip_amount", DoubleType()),
+    StructField("tolls_amount", DoubleType()),
+    StructField("improvement_surcharge", DoubleType()),
+    StructField("total_amount", DoubleType()),
+    StructField("congestion_surcharge", DoubleType()),
+])
