@@ -2,13 +2,15 @@ import os
 import boto3
 from pathlib import Path
 from urllib.request import urlretrieve
+import tempfile
 
 bucket = os.environ["S3_BUCKET"]
 raw_prefix = os.environ.get("RAW_PREFIX", "raw")
 
 BASE_URL = "https://d37ci6vzurychx.cloudfront.net/trip-data"
 MONTHS = ["2025-01", "2025-02", "2025-03"]
-LOCAL_DIR = Path("/tmp/tlc")
+# Use platform-agnostic temp directory (works on both Windows and Unix)
+LOCAL_DIR = Path(tempfile.gettempdir()) / "tlc"
 
 def download():
     LOCAL_DIR.mkdir(parents=True, exist_ok=True)
