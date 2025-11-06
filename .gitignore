@@ -118,3 +118,5 @@ results/
 .DS_Store
 Thumbs.db
 
+*.whl
+*.jar

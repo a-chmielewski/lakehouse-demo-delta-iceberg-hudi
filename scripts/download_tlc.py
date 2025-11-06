@@ -9,7 +9,7 @@ raw_prefix = os.environ.get("RAW_PREFIX", "raw")
 
 BASE_URL = "https://d37ci6vzurychx.cloudfront.net/trip-data"
 MONTHS = ["2025-01", "2025-02", "2025-03"]
-# Use platform-agnostic temp directory (works on both Windows and Unix)
+# Use platform-agnostic temp directory
 LOCAL_DIR = Path(tempfile.gettempdir()) / "tlc"
 
 def download():
