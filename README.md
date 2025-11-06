@@ -443,8 +443,3 @@ MIT License - Feel free to use this project as a learning resource or starting p
 
 ---
 
-**Author**: Portfolio Project  
-**Date**: November 2024  
-**AWS Region**: eu-central-1  
-**Spark Version**: 3.5.1
-
